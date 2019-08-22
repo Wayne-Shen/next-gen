@@ -1,6 +1,6 @@
 import React from 'react';
 import App from 'next/app';
-import Layout from '../src/Layout';
+import Layout from '../src/layout';
 
 class MyApp extends App {
     componentDidMount() {
