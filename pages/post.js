@@ -1,4 +1,7 @@
 import React from "react";
+import Container from "@material-ui/core/Container";
+import Box from "@material-ui/core/Box";
+import {Typography} from "@material-ui/core";
 
 class Post extends React.Component {
     static async getInitialProps({query}) {
@@ -9,9 +12,16 @@ class Post extends React.Component {
         };
     }
 
-    render = slug => {
-        console.log(slug);
-        return <h1>My blog post {slug} </h1>;
+    render = (props) => {
+        console.log(this.slug);
+        return <>
+            <Container maxWidth="sm">
+                <Box my={9}>
+
+                    {/*<Typography>{props.slug}</Typography>*/}
+                </Box>
+            </Container>
+        </>;
     }
 }
 

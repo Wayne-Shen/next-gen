@@ -9,7 +9,6 @@ import SearchAppBar from "./components/sp-head";
 class Layout extends React.Component {
     render() {
         const { children } = this.props;
-        console.log(children.props.title);
         return (
             <Container>
                 <Head>

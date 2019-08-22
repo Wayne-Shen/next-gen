@@ -13,8 +13,6 @@ class MyApp extends App {
 
     render() {
         const { Component, pageProps } = this.props;
-
-        console.log(pageProps.title);
         return (
             <Layout title={pageProps.title}>
                 <Component {...pageProps} />

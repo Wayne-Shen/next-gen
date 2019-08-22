@@ -25,9 +25,10 @@ function Copyright() {
 }
 
 Index.getInitialProps = async ({req}) => {
-    console.log('start from client');
-    const posts = await Axios.get('https://api.wayneshen.me/posts');
-    return {title: 'Home', posts: posts.data};
+    // console.log('start from client');
+    // const posts = await Axios.get('https://api.wayneshen.me/posts');
+    // return {title: 'Home', posts: posts.data};
+    return {title:'Home'};
 };
 export default function Index(props) {
     let posts = <div/>;
