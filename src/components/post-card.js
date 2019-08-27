@@ -1,26 +1,29 @@
 import * as React from "react";
 import Link from "../link";
-
-import Divider from "@material-ui/core/Divider";
-import {Card, CardHeader, Paper} from "@material-ui/core";
 import Box from "@material-ui/core/Box";
+import {makeStyles} from "@material-ui/styles";
+import Divider from "@material-ui/core/Divider";
 
-export default class PostCard extends React.Component {
-    render() {
-        return (
-            <Box>
-            <Card>
-                <CardHeader>
-                    <Link href={"/post?slug=" + this.props.name} color="primary">
-                        Card content.
-                    </Link>
-                </CardHeader>
-            </Card>
+const useStyles = makeStyles(() => ({
+        link: {
+            fontSize: 30,
+            '&:hover': {
+                textDecoration: 'none'
+            }
+        },
+    }))
+;
 
-                <Link href={"/post?slug=" + this.props.name} color="primary">
-                    Read More...
-                </Link>
-            </Box>
-        );
-    }
+export default function PostCard(props) {
+    const classes = useStyles();
+
+    return (
+        <Box>
+            {/*<Avatar alt="Remy Sharp" src="https://pic.36krcnd.com/201908/27074733/qsdsqn3uzurbuun6!heading"/>*/}
+            <Link href={"/post?slug=" + props.post.slug} color="primary" className={classes.link}>
+                {props.post.name}
+            </Link>
+            <Divider absolute={true}/>
+        </Box>
+    );
 }

@@ -4,7 +4,6 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import MuiLink from '@material-ui/core/Link';
 import Link from '../src/link';
-import Axios from 'axios';
 import ProTip from "../src/pro-tip";
 import PostCard from "../src/components/post-card";
 
@@ -28,19 +27,33 @@ Index.getInitialProps = async ({req}) => {
     // console.log('start from client');
     // const posts = await Axios.get('https://api.wayneshen.me/posts');
     // return {title: 'Home', posts: posts.data};
-    return {title:'Home'};
+    return {title: 'Home'};
 };
-export default function Index(props) {
-    let posts = <div/>;
+export default function Index() {
 
+    const posts = [{
+        name: 'EMR - How to setup an EMR cluster (1)',
+        slug: 'emr-1'
+    }, {
+        name: 'EMR - How to setup an EMR cluster (2)',
+        slug: 'emr-2'
+    }, {
+        name: 'EMR - How to setup an EMR cluster (3)',
+        slug: 'emr-3'
+    }
+    ];
+
+    const postCards = posts.map((item) =>
+        <PostCard key={item.slug} post={item}/>
+    );
 
     return (
         <>
             <Container maxWidth="sm">
                 <Box my={9}>
-                    {posts}
-                    <PostCard name="hello"/>
-                    <PostCard name="Again"/>
+
+                    {postCards}
+
 
                     <Link href="/about" color="secondary">
                         Go to the about page
