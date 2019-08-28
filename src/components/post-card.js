@@ -7,9 +7,9 @@ import Divider from "@material-ui/core/Divider";
 const useStyles = makeStyles(() => ({
         link: {
             fontSize: 30,
-            '&:hover': {
-                textDecoration: 'none'
-            }
+            // '&:hover': {
+            //     textDecoration: 'none'
+            // }
         },
     }))
 ;
@@ -20,7 +20,8 @@ export default function PostCard(props) {
     return (
         <Box>
             {/*<Avatar alt="Remy Sharp" src="https://pic.36krcnd.com/201908/27074733/qsdsqn3uzurbuun6!heading"/>*/}
-            <Link href={"/post?slug=" + props.post.slug} color="primary" className={classes.link}>
+            <Link underline="none" href={"/post?slug=" + props.post.slug} color="primary"
+                  className={classes.link}>
                 {props.post.name}
             </Link>
             <Divider absolute={true}/>

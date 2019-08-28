@@ -32,14 +32,11 @@ Index.getInitialProps = async ({req}) => {
 export default function Index() {
 
     const posts = [{
-        name: 'EMR - How to setup an EMR cluster (1)',
-        slug: 'emr-1'
+        name: 'Under construction with markdown (1)',
+        slug: 'cons-1'
     }, {
-        name: 'EMR - How to setup an EMR cluster (2)',
-        slug: 'emr-2'
-    }, {
-        name: 'EMR - How to setup an EMR cluster (3)',
-        slug: 'emr-3'
+        name: '正在基于Strapi + Nextjs + MUI 建设中 (2)',
+        slug: 'cons-2'
     }
     ];
 
@@ -49,8 +46,8 @@ export default function Index() {
 
     return (
         <>
-            <Container maxWidth="sm">
-                <Box my={9}>
+            <Container maxWidth="md">
+                <Box my={12}>
 
                     {postCards}
 

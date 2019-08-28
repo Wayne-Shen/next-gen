@@ -1,11 +1,9 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
-import { fade, makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
+import {fade, makeStyles} from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles(theme => ({
@@ -16,6 +14,7 @@ const useStyles = makeStyles(theme => ({
         marginRight: theme.spacing(2),
     },
     title: {
+        fontFamily: 'Oswald',
         flexGrow: 1,
         display: 'none',
         [theme.breakpoints.up('sm')]: {
@@ -77,11 +76,11 @@ export default function SearchAppBar() {
             <MenuIcon />
           </IconButton> */}
                     <Typography className={classes.title} variant="h6" noWrap>
-                        {/* 云计算学习笔记 */}Whatever it matters the world to be different
+                        This site is under construction.
                     </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
-                            <SearchIcon />
+                            <SearchIcon/>
                         </div>
                         <InputBase
                             placeholder="Search…"
@@ -89,7 +88,7 @@ export default function SearchAppBar() {
                                 root: classes.inputRoot,
                                 input: classes.inputInput,
                             }}
-                            inputProps={{ 'aria-label': 'search' }}
+                            inputProps={{'aria-label': 'search'}}
                         />
                     </div>
                 </Toolbar>

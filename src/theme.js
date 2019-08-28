@@ -4,7 +4,7 @@ import { red } from '@material-ui/core/colors';
 // Create a theme instance.
 const theme = createMuiTheme({
     typography: {
-        fontFamily: ['Oswald', 'Liu Jian Mao Cao'].join(','),
+        fontFamily: ['Noto Sans SC', 'Poppins','sans-serif'].join(','),
     },
     palette: {
         primary: {

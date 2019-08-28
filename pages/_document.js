@@ -20,9 +20,10 @@ class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           /> */}
-                <link href="https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao|Oswald&display=swap"
+
+                <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC|Poppins&display=swap"
                       rel="stylesheet"></link>
-                {/* <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet" /> */}
+                <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"/>
             </Head>
             <body>
             <Main/>
