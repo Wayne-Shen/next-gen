@@ -3,7 +3,6 @@ import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import MuiLink from '@material-ui/core/Link';
-import Link from '../src/link';
 import ProTip from "../src/pro-tip";
 import PostCard from "../src/components/post-card";
 
@@ -33,10 +32,16 @@ export default function Index() {
 
     const posts = [{
         name: 'Under construction with markdown (1)',
-        slug: 'cons-1'
+        slug: 'cons-1',
+        tag: 'demo',
+        date: '2019-09-19',
+        info: 'This is a brief introduction of the post'
     }, {
         name: '正在基于Strapi + Nextjs + MUI 建设中 (2)',
-        slug: 'cons-2'
+        slug: 'cons-2',
+        tag: 'AWS',
+        date: '2019-09-19',
+        info: 'This is a brief introduction of the post again'
     }
     ];
 
@@ -52,9 +57,6 @@ export default function Index() {
                     {postCards}
 
 
-                    <Link href="/about" color="secondary">
-                        Go to the about page
-                    </Link>
                     <ProTip/>
                     <Copyright/>
                 </Box>

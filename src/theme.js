@@ -13,6 +13,9 @@ const theme = createMuiTheme({
         secondary: {
             main: '#19857b',
         },
+        textPrimary:{
+            main:'#ff9933',
+        },
         error: {
             main: red.A400,
         },
