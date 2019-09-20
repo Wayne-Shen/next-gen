@@ -22,20 +22,20 @@ const useStyles = makeStyles(() => ({
 
         tag: {
             fontSize: '0.875rem',
-            color:'#ff9933',
+            color: '#ff9933',
             // '&:hover': {
             //     textDecoration: 'none'
             // }
         },
         paper: {
-            padding: 5,
+            padding: 10,
         },
 
         img: {
             margin: 'auto',
             display: 'block',
-            maxWidth: '100%',
-            maxHeight: '100%',
+            maxWidth: '50',
+            maxHeight: '50',
         },
     }))
 ;
@@ -51,8 +51,8 @@ export default function PostCard(props) {
                     <Hidden xsDown>
                         <Grid item xs={12} sm={4}>
                             <ButtonBase className={classes.image}>
-                                <img className={classes.img} alt="complex"
-                                     src="https://material-ui.com/static/images/grid/complex.jpg"/>
+                                {/*<img className={classes.img} alt="complex"*/}
+                                {/*     src="https://d1hi65d6ydczr1.cloudfront.net/test.jpg"/>*/}
                             </ButtonBase>
                         </Grid>
                     </Hidden>
@@ -61,16 +61,16 @@ export default function PostCard(props) {
 
                             <Link underline="none" href={"/post?slug=" + props.post.slug} color="primary"
                                   className={classes.link}>
-                                {props.post.name}
+                                {props.post.title}
                             </Link>
                             <Typography variant="button" component="h5">
                                 <Link underline="none" href={"/post?slug=" + props.post.slug} color="textPrimary"
                                       className={classes.tag}>
                                     {props.post.tag}
-                                </Link> @ {props.post.date}
+                                </Link> @ {props.post.createdAt.substring(0,10)}
                             </Typography>
                             <Typography variant="subtitle1" component="h5">
-                                {props.post.info}
+                                {props.post.introduction}
                             </Typography>
                         </Box>
 
