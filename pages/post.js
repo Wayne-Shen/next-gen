@@ -1,16 +1,16 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
-import Markdown from 'markdown-to-jsx';
 import {makeStyles} from "@material-ui/styles";
 import Axios from "axios";
-
+import ReactMarkdown from "react-markdown";
+import Prism from "prismjs";
 
 const useStyles = makeStyles(() => ({
         root: {
             // fontFamily: 'Arial',
-            fontSize: 20
+            fontSize: 18
             // '&:hover': {
             //     textDecoration: 'none'
             // }
@@ -21,19 +21,10 @@ const useStyles = makeStyles(() => ({
 
 const Post = (props) => {
 
-    // let body;
-    // useEffect(async () => {
-    //     const response = await Axios.get('https://api.wayneshen.me/posts');
-    //     body = response.data[0].body;
-    // })
-
-    const children = `
-    
-`;
-
+    useEffect(() => {
+        Prism.highlightAll();
+    });
     const classes = useStyles();
-
-    // Prism.highlightAll();
 
     return <>
         <Container maxWidth="md">
@@ -42,9 +33,8 @@ const Post = (props) => {
                 <div className={
                     classes.root
                 }>
-                    <Markdown children={props.item}>
-
-                    </Markdown></div>
+                    <ReactMarkdown source={props.item}></ReactMarkdown>
+                </div>
             </Box>
         </Container>
     </>;

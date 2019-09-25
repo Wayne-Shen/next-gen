@@ -76,14 +76,14 @@ export default function SearchAppBar() {
             <MenuIcon />
           </IconButton> */}
                     <Typography className={classes.title} variant="h6" noWrap>
-                        This site is under construction.
+                        work in progress//
                     </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
                             <SearchIcon/>
                         </div>
                         <InputBase
-                            placeholder="Search…"
+                            placeholder="hardly working..."
                             classes={{
                                 root: classes.inputRoot,
                                 input: classes.inputInput,
