@@ -48,14 +48,14 @@ export default function PostCard(props) {
         <div className={classes.root}>
             <Paper className={classes.paper}>
                 <Grid container>
-                    <Hidden xsDown>
-                        <Grid item xs={12} sm={4}>
-                            <ButtonBase className={classes.image}>
-                                {/*<img className={classes.img} alt="complex"*/}
-                                {/*     src="https://d1hi65d6ydczr1.cloudfront.net/test.jpg"/>*/}
-                            </ButtonBase>
-                        </Grid>
-                    </Hidden>
+                    {/*<Hidden xsDown>*/}
+                    {/*    <Grid item xs={12} sm={4}>*/}
+                    {/*        <ButtonBase className={classes.image}>*/}
+                    {/*            /!*<img className={classes.img} alt="complex"*!/*/}
+                    {/*            /!*     src="https://d1hi65d6ydczr1.cloudfront.net/test.jpg"/>*!/*/}
+                    {/*        </ButtonBase>*/}
+                    {/*    </Grid>*/}
+                    {/*</Hidden>*/}
                     <Grid item xs={12} sm={8}>
                         <Box>
 

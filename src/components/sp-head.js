@@ -5,13 +5,18 @@ import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import {fade, makeStyles} from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
+import IconButton from "@material-ui/core/IconButton";
+import HomeIcon from '@material-ui/icons/Home';
+import Link from "../link";
+import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
     },
-    menuButton: {
+    homeButton: {
         marginRight: theme.spacing(2),
+        color: 'white',
     },
     title: {
         fontFamily: 'Oswald',
@@ -67,14 +72,18 @@ export default function SearchAppBar() {
         <div className={classes.root}>
             <AppBar position="fixed">
                 <Toolbar>
-                    {/* <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton> */}
+                    <Link underline="none" href={"/"} color="primary"
+                          className={classes.link}>
+                        <IconButton
+                            edge="start"
+                            className={classes.homeButton}
+                            aria-label="home"
+
+                        >
+                            <HomeIcon/>
+                        </IconButton>
+                    </Link>
+
                     <Typography className={classes.title} variant="h6" noWrap>
                         work in progress//
                     </Typography>

@@ -16,11 +16,9 @@ class MyDocument extends Document {
                 />
                 {/* PWA primary color */}
                 <meta name="theme-color" content={theme.palette.primary.main}/>
-
-                <link href="https://d1hi65d6ydczr1.cloudfront.net/prism.css" rel="stylesheet"></link>
-
+                <link href="../static/css/prism.css" rel="stylesheet"/>
                 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC|Poppins&display=swap"
-                      rel="stylesheet"></link>
+                      rel="stylesheet"/>
                 <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"/>
             </Head>
             <body>
