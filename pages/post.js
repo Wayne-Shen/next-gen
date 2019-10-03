@@ -6,6 +6,14 @@ import {makeStyles} from "@material-ui/styles";
 import Axios from "axios";
 import ReactMarkdown from "react-markdown";
 import Prism from "prismjs";
+import 'prismjs/components/prism-json';
+import 'prismjs/components/prism-python';
+import 'prismjs/components/prism-java';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-yaml';
+import 'prismjs/components/prism-bash';
+import 'prismjs/components/prism-http';
+
 
 const useStyles = makeStyles(() => ({
         root: {
@@ -33,12 +41,12 @@ const Post = (props) => {
                 <div className={
                     classes.root
                 }>
-                    <ReactMarkdown source={props.item}></ReactMarkdown>
+                    <ReactMarkdown source={props.item}/>
                 </div>
             </Box>
         </Container>
     </>;
-}
+};
 
 Post.getInitialProps = async ({query}) => {
 
@@ -56,6 +64,6 @@ Post.getInitialProps = async ({query}) => {
     // else {
     //     await Router.push('/about')
     // }
-}
+};
 
 export default Post;

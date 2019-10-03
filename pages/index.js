@@ -11,13 +11,21 @@ function Copyright() {
     return (
         <Typography variant='body2' color='textSecondary' align='center'>
             {'Copyright © '}
-            <MuiLink color='inherit' href='https://material-ui.com/'>
-                Your Website
+            <MuiLink color='inherit' href='https://wayneshen.me'>
+                Wayne Shen
             </MuiLink>{' '}
             {new Date().getFullYear()}
             {'. Built with '}
+            <MuiLink color='inherit' href='https://strapi.io/'>
+                striapi
+            </MuiLink>
+            {' & '}
+            <MuiLink color='inherit' href='https://nextjs.org/'>
+                nextjs
+            </MuiLink>
+            {' & '}
             <MuiLink color='inherit' href='https://material-ui.com/'>
-                Material-UI.
+                material-ui
             </MuiLink>
         </Typography>
     );
