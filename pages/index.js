@@ -16,7 +16,7 @@ function Copyright() {
             {new Date().getFullYear()}
             {'. Built with '}
             <MuiLink color='inherit' href='https://strapi.io/'>
-                striapi
+                strapi
             </MuiLink>
             {' & '}
             <MuiLink color='inherit' href='https://nextjs.org/'>
@@ -32,7 +32,7 @@ function Copyright() {
 
 Index.getInitialProps = async () => {
     let posts;
-    posts = await Axios.get('https://api.wayneshen.me/posts');
+    posts = await Axios.get('https://api.wayneshen.me/posts?_sort=createdAt:desc');
     return {title: 'Home', posts: posts.data};
 };
 export default function Index(props) {
