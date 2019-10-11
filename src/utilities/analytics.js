@@ -6,7 +6,7 @@ export const InitAnalytics = () => {
 };
 
 export const LogPageView = () => {
-    ReactGA.set({page: window.location.pathname})
-    ReactGA.pageview(window.location.pathname)
+    ReactGA.set({page: window.location.pathname + window.location.search});
+    ReactGA.pageview(window.location.pathname + window.location.search);
 };
 
